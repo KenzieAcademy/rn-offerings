@@ -1,11 +1,12 @@
+// easy referrence to minimum requirement delete in production
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import HomePage from "./Components/HomePage.js";
-export default class App extends React.Component {
+
+export default class Example extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <HomePage />
+        <Text>Hello world I am the basic boiler plate!</Text>
       </View>
     );
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 import Navbar from "./Navbar";
 import SplashArt from "./SplashArt";
 
@@ -7,13 +7,14 @@ export default class HomePage extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View>
-          <Navbar leftIcon="menu" text="offerings" />
-        </View>
-        <View style={{ backgroundColor: "blue", flex: 1 }}>
-          <SplashArt />
-        </View>
-        <View style={{ backgroundColor: "red", flex: 1 }} />
+        <Navbar style={styles.navbar} leftIcon="menu" text="offerings" />
+        <ScrollView>
+          <View style={{ height: 275 }}>
+            <SplashArt />
+          </View>
+          <View style={{ backgroundColor: "blue", height: 300 }} />
+          <View style={{ backgroundColor: "red", height: 300 }} />
+        </ScrollView>
       </View>
     );
   }

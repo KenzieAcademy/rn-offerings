@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import SplashImage from "../assets/bitmap.png";
-import { Platform } from "expo-core";
+
 export default class SplashArt extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.itemContainer}>
-          <Image source={SplashImage} />
+          <Image source={SplashImage} styles={{ height: 100, width: 100 }} />
         </View>
 
         <View style={styles.itemContainer}>
@@ -29,15 +29,10 @@ const styles = StyleSheet.create({
   itemContainer: {
     justifyContent: "center"
   },
-  imageContainer: {
-    width: "100%",
-    height: "100%"
-  },
   text: {
-    fontSize: 35,
+    fontSize: 30,
     color: "#373504",
     fontWeight: "bold",
-    alignSelf: "flex-end",
-    marginLeft: Platform.OS == "ios" ? 0 : -10
+    alignSelf: "flex-end"
   }
 });
